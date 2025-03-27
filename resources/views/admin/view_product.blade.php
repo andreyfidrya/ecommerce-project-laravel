@@ -67,6 +67,8 @@
 
                             <th>Image</th>
 
+                            <th>Delete</th>
+
                         </tr>
 
 
@@ -83,6 +85,12 @@
                             <td>{{$products->price}}</td>
 
                             <td>{{$products->quantity}}</td>
+
+                            <td>
+
+                                <img height="120" width="120" src="products/{{$products->image}}">
+
+                            </td>
 
                             <td>
 
