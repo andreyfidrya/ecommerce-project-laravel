@@ -93,9 +93,7 @@
                             </td>
 
                             <td>
-
-                                <img height="120" width="120" src="products/{{$products->image}}">
-
+                                <a class="btn btn-danger" href="{{url('delete_product',$products->id)}}">Delete</a>
                             </td>
 
                         </tr>
@@ -128,6 +126,9 @@
             </div>
         </div>
     <!-- JavaScript files-->
+
+    
+
     <script src="{{asset('/admincss/vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('/admincss/vendor/popper.js/umd/popper.min.js')}}"> </script>
     <script src="{{asset('/admincss/vendor/bootstrap/js/bootstrap.min.js')}}"></script>

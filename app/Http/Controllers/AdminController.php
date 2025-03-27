@@ -128,4 +128,18 @@ class AdminController extends Controller
         $product = Product::paginate(5);
         return view('admin.view_product', compact('product'));
     }
+
+
+    public function delete_product($id)
+    {
+
+        $data = Product::find($id);
+
+        $data->delete();
+
+        toastr()->timeout(10000)->closeButton()->success('Product Deleted Successfully.');
+
+        return redirect()->back();
+
+    }
 }
