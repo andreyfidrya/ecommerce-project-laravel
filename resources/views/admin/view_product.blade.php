@@ -32,6 +32,7 @@
     {
         border: 1px solid skyblue;
         text-align: center;
+        color: white;
     }
 
 
@@ -75,7 +76,7 @@
 
                             <td>{{$products->title}}</td>
 
-                            <td>{{$products->description}}</td>
+                            <td>{!!Str::limit($products->description, 30)!!}</td>
 
                             <td>{{$products->category}}</td>
 
@@ -99,9 +100,20 @@
                     </table>
 
 
+                    
+
+
 
 
                 </div>
+
+                <div class="div_deg">
+
+                    {{$product->onEachSide(1)->links()}}
+                
+                </div>
+
+
 
 
                 </div>
