@@ -74,6 +74,8 @@
 
             <th>Image</th>
 
+            <th>Delete</th>
+
         </tr>
 
         <?php 
@@ -90,6 +92,9 @@
             <td>{{$cart->product->price}}</td>
             <td>
                 <img width="150" src="/products/{{$cart->product->image}}">
+            </td>
+            <td>
+                <a class="btn btn-danger" href="{{url('delete_cart',$cart->id)}}">Delete</a>
             </td>
 
 

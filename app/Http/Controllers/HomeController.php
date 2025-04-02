@@ -118,10 +118,22 @@ class HomeController extends Controller
 
         return redirect()->back();
 
-
     }
 
+    public function delete_cart($id)
+    {
+        
+        $cart = Cart::find($id);
 
+        $cart->delete();
+
+        toastr()->timeout(10000)->closeButton()->success('Product Has Been Deleted from Cart Successfully.');
+
+        
+
+        return redirect()->back();
+
+    }
 
     public function mycart()
     {
@@ -136,13 +148,9 @@ class HomeController extends Controller
 
             $cart = Cart::where('user_id',$userid)->get();
 
-            
-
-
         }
 
         return view('home.mycart', compact('count', 'cart'));
-
 
     }
 }
