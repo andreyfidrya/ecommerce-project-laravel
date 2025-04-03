@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Category;
 
+use App\Models\Order;
+
 use App\Models\Product;
 
 class AdminController extends Controller
@@ -220,5 +222,13 @@ class AdminController extends Controller
 
 
 
+    }
+
+
+    public function view_orders()
+    {
+        $data = Order::all();
+
+        return view('admin.order', compact('data'));
     }
 }
