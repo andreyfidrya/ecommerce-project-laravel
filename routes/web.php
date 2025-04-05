@@ -54,7 +54,7 @@ route::get('view_product', [AdminController::class, 'view_product'])->middleware
 route::get('delete_product/{id}', [AdminController::class, 'delete_product'])->middleware(['auth', 'admin']);
 
 
-route::get('update_product/{id}', [AdminController::class, 'update_product'])->middleware(['auth', 'admin']);
+route::get('update_product/{slug}', [AdminController::class, 'update_product'])->middleware(['auth', 'admin']);
 
 
 
@@ -77,6 +77,15 @@ route::get('delete_cart/{id}', [HomeController::class, 'delete_cart'])->middlewa
 
 route::post('confirm_order', [HomeController::class, 'confirm_order'])->middleware(['auth', 'verified']);
 
+
+route::get('shop',[HomeController::class,'shop']);
+
+route::get('why',[HomeController::class,'why']);
+
+
+route::get('testimonial',[HomeController::class,'testimonial']);
+
+route::get('contact',[HomeController::class,'contact']);
 
 Route::controller(HomeController::class)->group(function(){
     Route::get('stripe/{value}', 'stripe');

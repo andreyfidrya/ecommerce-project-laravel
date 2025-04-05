@@ -158,9 +158,9 @@ class AdminController extends Controller
 
     }
 
-    public function update_product($id)
+    public function update_product($slug)
     {
-        $data = Product::find($id);
+        $data = Product::where('slug', $slug)->get()->first();
 
         $category = Category::all();
 

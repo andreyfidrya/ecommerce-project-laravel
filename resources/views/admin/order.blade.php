@@ -52,6 +52,13 @@
                 <div class="container-fluid">
 
 
+
+                <h3>All Orders</h3>
+
+                <br>
+                <br>
+
+
             <div class="table_center">
 
                 <table>
@@ -61,7 +68,8 @@
                         <th>Phone</th>
                         <th>Product title</th>
                         <th>Price</th>
-                        <th>Image</th>
+                        <th>Image</th>  
+                        <th>Payment Status</th>                      
                         <th>Status</th>
                         <th>Change Status</th>
                         <th>Print PDF</th>
@@ -80,6 +88,8 @@
                           <img width="150" src="products/{{$data->product->image}}">
                         
                         </td>
+
+                        <td>{{$data->payment_status}}</td>
 
                         <td>
 

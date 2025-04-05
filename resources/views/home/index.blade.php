@@ -31,12 +31,7 @@
 
 
 
-
-  <!-- contact section -->
-
-  @include('home.contact')
-
-  <!-- end contact section -->
+  
 
    
 

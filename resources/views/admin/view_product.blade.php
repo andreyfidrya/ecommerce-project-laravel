@@ -111,7 +111,7 @@
                             </td>
 
                             <td>
-                                <a class="btn btn-success" href="{{url('update_product',$products->id)}}">Edit</a>
+                                <a class="btn btn-success" href="{{url('update_product',$products->slug)}}">Edit</a>
                             </td>
                             
                             <td>
